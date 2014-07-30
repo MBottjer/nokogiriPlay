@@ -11,5 +11,9 @@ categories.each_key do |category|
 		puts categories[category]
 		puts item.css(":nth-child(1)").text[/\<(.*?)>/,1]
 		puts item.css("+ td").text.gsub(/\s+/, " ")
+		if item.css("img").to_s.include? "img"
+			puts true
+		end
+			
 	end
 end
